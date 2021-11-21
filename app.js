@@ -16,10 +16,12 @@ function getComputerChoice () {
 }
 console.log(getComputerChoice());
 
+
 function game(userChoice) {
-    const getComputerChoice = getComputerChoice();
+    const computerChoice = getComputerChoice();
+    console.log("userChoice => " + userChoice);
+    console.log("computer choice => " + computerChoice);
 }
-console.log(getComputerChoice())
 
 function main() {
     rock_div.addEventListener('click', function() {
@@ -35,5 +37,4 @@ function main() {
     })
 
 }
-
 main();
