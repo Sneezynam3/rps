@@ -34,7 +34,7 @@ function win(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!🔥 `; 
     //document.getElementById(userChoice).classList.add('green-glow') 
     userChoice_div.classList.add('green-glow');
-    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow') }, 300);
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 300);
 } 
 
 //Same explaination and logic as above execpt for a loss and red vs. green.
@@ -48,7 +48,7 @@ function lose(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lost...💩`
     userChoice_div.classList.add('red-glow');
     //ES6 using the arrow function
-    setTimeout(() => {document.getElementById(userChoice).classList.remove('red-glow'), 300);  
+    setTimeout(() => {document.getElementById(userChoice).classList.remove('red-glow')}, 300);  
 }
 
 //Function for a tie game. Local variables still need declared in order for HTML to give game outcome explaination. No score is incremented. Use of neutral grey instead of red/green. 
@@ -92,8 +92,9 @@ function main() {
     })
 
     paper_div.addEventListener('click', function() {game("p");})
-//es6 function
-    scissors_div.addEventListener('click', => game("s"));
+
+    //es6 function
+    scissors_div.addEventListener('click', () => game("s"));
 
 }
 main();
