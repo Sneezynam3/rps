@@ -27,17 +27,24 @@ function win(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "User".fontsize(3).sub();
     const smallCompWord = "Comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord    }. You win!`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!🔥 `;  
 } 
 
-function lose() {
+function lose(userChoice, computerChoice) {
     computerScore++;
-    
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = "User".fontsize(3).sub();
+    const smallCompWord = "Comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lost...💩`  
 }
 
-function draw() {
-    console.log("DRAW");
+function draw(userChoice, computerChoice) {
+    const smallUserWord = "User".fontsize(3).sub();
+    const smallCompWord = "Comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} tied ${convertToWord(computerChoice)}${smallCompWord}. Its a draw.`
 }
+
 
 
 
